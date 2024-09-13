@@ -15,7 +15,7 @@ class Component {
     }
 
     fun inject(activity: Activity) {
-        activity.keyboard = Keyboard()
+//        activity.keyboard = Keyboard()
     }
 
 }
