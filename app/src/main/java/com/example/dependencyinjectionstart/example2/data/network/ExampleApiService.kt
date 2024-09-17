@@ -6,7 +6,7 @@ import com.example.dependencyinjectionstart.R
 import javax.inject.Inject
 import javax.inject.Singleton
 
-@Singleton
+//@Singleton
 class ExampleApiService @Inject constructor(
     private val context: Context,
     private val timeMillis: Long
