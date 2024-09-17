@@ -12,15 +12,13 @@ class MainActivity : AppCompatActivity() {
     lateinit var viewModel: ExampleViewModel
 
     private val component by lazy(LazyThreadSafetyMode.NONE) {
-        DaggerApplicationComponent.builder()
-            .context(application)
-            .timeMillis(System.currentTimeMillis())
-            .build()
+        DaggerApplicationComponent.factory()
+            .create(application, System.currentTimeMillis())
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         component.inject(this)
-        super.onCreate(savedInstanceState)
+        super.onCreate( savedInstanceState)
         setContentView(R.layout.activity_main)
         viewModel.method()
     }
